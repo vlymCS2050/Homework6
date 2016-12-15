@@ -1,0 +1,118 @@
+Part 1
+
+4.1.2  Draw, in the style of the ﬁgure in the text (page 524), the adjacency matrix built by Graph’s input stream constructor for the ﬁle tinyGex2.txt depicted at left.
+ 
+Answer:
+  Included in the file with the name: 412.jpg
+  
+4.1.4 Add a method hasEdge() to Graph which takes two int arguments v and w and returns true if the graph has an edge v-w, false otherwise. 
+
+Answer:  public boolean hasEdge(int v, int w)
+   {
+      validateVertex(v);
+      validateVertex(w);
+      
+      for(int a: adj[v])
+      {
+         if(a == w)
+            return true;
+      }
+      
+      return false;
+   }
+
+   
+Part 2
+
+4.2.2  Draw, in the style of figure in the text (page 524), the adjacency matrix built by Digraph’s input stream constructor for the file tinyGex2.txt depicted at left.
+
+Answer:
+  Included in the file with the name: 422.jpg
+
+4.2.4  Add a method hasEdge() to Digraph which takes two int arguments v and w and returns true if the graph has an edge v->w, false otherwise.
+
+   public boolean hasEdge(int v, int w)
+   {
+      validateVertex(v);
+      validateVertex(w);
+      
+      for(int a: adj[v])
+      {
+         if(a == w)
+            return true;
+      }
+      
+      return false;
+   }
+
+
+Part 3
+
+4.3.6  Give the MST of the weighted graph obtained by deleting vertex 7 from tinyEWG.txt(see page 604).
+
+  Included in the file with the name: 436.jpg
+
+
+Part 4
+
+4.4.3  Develop an implementation of EdgeWeightedDigraph for dense graphs that uses an adjacency-matrix(two-dimensional array of weights) representation (see EXERCISE 4.3.9). Ignore parallel edges.
+
+Answer:
+
+Included in the file: EdgeWeightedDigraphArry.java (dependencies: DirectedEdge.java,
+    In.java, StdOut.java, tinyEWD.txt or tinyEWG.txt)
+
+Used tinyEWD.txt
+
+V = 8 E = 15
+
+	0	1	2	3	4	5	6	7	
+
+0	0.0	0.0	0.26	0.0	0.38	0.0	0.0	0.0
+1	0.0	0.0	0.0	0.29	0.0	0.0	0.0	0.0
+2	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.34
+3	0.0	0.0	0.0	0.0	0.0	0.0	0.52	0.0
+4	0.0	0.0	0.0	0.0	0.0	0.35	0.0	0.37
+5	0.0	0.32	0.0	0.0	0.35	0.0	0.0	0.28
+6	0.58	0.0	0.4	0.0	0.93	0.0	0.0	0.0
+7	0.0	0.0	0.0	0.39	0.0	0.28	0.0	0.0
+
+
+Used tinyEWG.txt
+
+V = 8 E = 16
+
+0	0.0	0.0	0.26	0.0	0.38	0.0	0.0	0.16
+1	0.0	0.0	0.36	0.29	0.0	0.32	0.0	0.19
+2	0.0	0.0	0.0	0.17	0.0	0.0	0.0	0.34
+3	0.0	0.0	0.0	0.0	0.0	0.0	0.52	0.0
+4	0.0	0.0	0.0	0.0	0.0	0.35	0.0	0.37
+5	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.28
+6	0.58	0.0	0.4	0.0	0.93	0.0	0.0	0.0
+7	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+
+
+Part 5
+
+If we were to design the game, I would probably think of a game similar to years ago. I love maze games.  A maze where you can walk along and find treasure.  It will be a 2D game because it is old school.  The story would include a hero, a damsel in distress, and angry queen, gargoyles, swords, and even some magic.  All of this information is coming from my most recent experience in my Code Reading class as well as my past with playing many different manual maze games and other machines(such as Pacman).    
+
+  Mechanics: Find the damsel in distress. Maze style, finding treasures to become
+  stronger to conquer the gargoyles and to calm the angry queen.  Going forward
+  without being able to go backwards.  However, you would be allowed to go around 
+  again if you still have not found all the treasure and/or if the queen is still
+  angry. 
+
+  Story: The introduction would explain you must release the damsel in distress,
+  calm the queen, gather as much treasure as you can, and fight off the gargoyles. 
+
+  Linear branching.
+  Aesthetics: Old times, 2d engine, forests, lakes, mountains, castles, moats.
+  Sounds of birds singing, other wildlife would appear, sounds of wind, maybe some 
+  quiet Scotish music on the background.
+  Technology: old 2d engine not graphic intensive.
+
+This is going to be a graph of objects with a linked list implementation.
+
+
+
+ 
